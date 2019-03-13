@@ -2,11 +2,15 @@ import discord
 from discord.ext.commands import Bot
 from discord.ext import commands
 import asyncio
+import time
+import random
+import os
+import requests
 
 from datetime import datetime, timezone
 
 Client = discord.Client()
-client = commands.Bot(command_prefix = "!")
+client = commands.Bot(command_prefix = "-")
 
 
 @client.event
