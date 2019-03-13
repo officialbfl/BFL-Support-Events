@@ -19,7 +19,7 @@ async def on_ready():
 
 @client.event
 async def on_member_join(member):
-	channel = member.server.get_channel("555088719066038292")
+	channel = member.server.get_channel("555479219686080534")
 	embed = discord.Embed(title="", description="{0} {1}".format(member.mention, member), color=0x7ED060)
 	embed.set_thumbnail(url=member.avatar_url)
 	embed.set_author(name="Member Joined", icon_url=member.avatar_url)
@@ -31,7 +31,7 @@ async def on_member_join(member):
 
 @client.event
 async def on_member_remove(member):
-	channel = member.server.get_channel("555088719066038292")
+	channel = member.server.get_channel("555479219686080534")
 	embed = discord.Embed(title="", description="{0} {1}".format(member.mention, member), color=0xEA1025)
 	embed.set_thumbnail(url=member.avatar_url)
 	embed.set_author(name="Member Left", icon_url=member.avatar_url)
@@ -41,7 +41,7 @@ async def on_member_remove(member):
 
 @client.event
 async def on_message_delete(message):
-	channel = client.get_channel('555088719066038292')
+	channel = client.get_channel('555479219686080534')
 	idk = message.content
 	eh = "\n"
 	embed = discord.Embed(title="", description="Message sent by {0} deleted in {1}".format(message.author.mention, message.channel.mention +eh +idk), color=0xEA1025)
@@ -54,7 +54,7 @@ async def on_message_delete(message):
 
 @client.event
 async def on_message_edit(before, after):
-	channel = client.get_channel('555088719066038292')
+	channel = client.get_channel('555479219686080534')
 	idk = before.content
 	eh = after.content
 	embed = discord.Embed(title="", description="Message edited by {0} in {1}".format(before.author.mention, before.channel.mention), color=0x6A7A94)
@@ -70,7 +70,7 @@ async def on_message_edit(before, after):
 
 @client.event
 async def on_channel_create(channel):
-	channell = client.get_channel('555088719066038292')
+	channell = client.get_channel('555479219686080534')
 	hi = channel.name
 	embed = discord.Embed(title="", description="", color=0x7ED060)
 	embed.add_field(name="Channel Created:", value=hi)
@@ -81,7 +81,7 @@ async def on_channel_create(channel):
 
 @client.event
 async def on_channel_delete(channel):
-	channell = client.get_channel('555088719066038292')
+	channell = client.get_channel('555479219686080534')
 	hi = channel.name
 	embed = discord.Embed(title="", description="", color=0xEA1025)
 	embed.add_field(name="Channel Deleted:", value=hi)
@@ -92,7 +92,7 @@ async def on_channel_delete(channel):
 
 @client.event
 async def on_channel_update(before, after):
-	channell = client.get_channel('555088719066038292')
+	channell = client.get_channel('555479219686080534')
 	idk = before.name
 	xd = after.name
 	idk1 = before.topic
@@ -109,7 +109,7 @@ async def on_channel_update(before, after):
 
 @client.event
 async def on_server_role_create(role):
-	channell = client.get_channel('555088719066038292')
+	channell = client.get_channel('555479219686080534')
 	idk = role.name
 	embed = discord.Embed(title="Role Created", description=idk, color=0x7ED060)
 	embed.set_author(name=role.server.name, icon_url=role.server.icon_url)
@@ -119,7 +119,7 @@ async def on_server_role_create(role):
 
 @client.event
 async def on_server_role_delete(role):
-	channell = client.get_channel('555088719066038292')
+	channell = client.get_channel('555479219686080534')
 	idk = role.name
 	embed = discord.Embed(title="Role Deleted", description=idk, color=0xEA1025)
 	embed.set_author(name=role.server.name, icon_url=role.server.icon_url)
@@ -129,7 +129,7 @@ async def on_server_role_delete(role):
 
 @client.event
 async def on_member_ban(member):
-	channell = client.get_channel('555088719066038292')
+	channell = client.get_channel('555479219686080534')
 	embed = discord.Embed(title="", description="{0} {1}".format(member.mention, member), color=0xEA1025)
 	embed.set_author(name="Member Banned", icon_url=member.avatar_url)
 	embed.set_thumbnail(url=member.avatar_url)
@@ -139,7 +139,7 @@ async def on_member_ban(member):
 
 @client.event
 async def on_member_unban(server, user):
-	channell = client.get_channel('555088719066038292')
+	channell = client.get_channel('555479219686080534')
 	embed = discord.Embed(title="", description="{0} {1}".format(user.mention, user), color=0x337FD5)
 	embed.set_author(name="Member Unbanned", icon_url=user.avatar_url)
 	embed.set_thumbnail(url=user.avatar_url)
