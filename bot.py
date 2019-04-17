@@ -358,7 +358,7 @@ async def on_message(message):
 			
 			embed = discord.Embed(title='', color=0x3391D0)
 			embed.add_field(name="__Announcement__", value= "```%s```" % (" ".join(args[1:])), inline=False)
-			embed.add_field(name="By:", value="{message.author}".format(message), inline=False)
+			embed.add_field(name="By:", value="{0.message.author}".format(message), inline=False)
 			embed.set_thumbnail(url="https://media.discordapp.net/attachments/566631626545823786/568131998523064320/ef94710266f57ca3e88c8cbe05fc4a8a.png?width=192&height=192")
 			a=await client.send_message(channel, embed=embed)
 			await client.add_reaction(a, "👍")
@@ -370,11 +370,11 @@ async def on_message(message):
 		else:
 			await client.send_message(message.channel, '{0.author.mention} Your announcement has been sent succesfully!'.format(message))
 			args = message.content.split(" ")		
-			channel=client.get_channel('568029667202695169')
+			channel=client.get_channel('568135270210207755')
 			await client.send_message(channel, "@everyone")
 			embed = discord.Embed(title='', color=0x3391D0)
 			embed.add_field(name="__Announcement__", value= "```%s```" % (" ".join(args[1:])), inline=False)
-			embed.add_field(name="By:", value="{message.author}".format(message), inline=False)
+			embed.add_field(name="By:", value="{0.message.author}".format(message), inline=False)
 			embed.set_thumbnail(url="https://media.discordapp.net/attachments/566631626545823786/568131998523064320/ef94710266f57ca3e88c8cbe05fc4a8a.png?width=192&height=192")
 			a=await client.send_message(channel, embed=embed)
 			await client.add_reaction(a, "👍")
