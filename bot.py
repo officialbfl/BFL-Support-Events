@@ -367,8 +367,6 @@ async def on_message(message):
 	if message.content.startswith('-everyoneannounce'):
 		if message.content[9:] =="":
 			await client.send_message(message.channel, 'Error.')
-		if ctx.message.author.server_permissions.administrator or ctx.message.author.id == '562000458181246982':
-			await client.send_message(message.channel, 'Error.')
 		else:
 			await client.send_message(message.channel, '{0.author.mention} Your announcement has been sent succesfully!'.format(message))
 			args = message.content.split(" ")		
