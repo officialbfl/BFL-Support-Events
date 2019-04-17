@@ -352,6 +352,7 @@ async def on_message(message):
 		if message.content[9:] =="":
 			await client.send_message(message.channel, 'Error. Type in an announcement.')
 		else:
+			if message.author.server_permissions.adminstrator
 			await client.send_message(message.channel, '{0.author.mention} Your announcement has been sent succesfully!'.format(message))
 			args = message.content.split(" ")		
 			channel=client.get_channel('568135270210207755')
@@ -368,7 +369,6 @@ async def on_message(message):
 		if message.content[9:] =="":
 			await client.send_message(message.channel, 'Error.')
 		else:
-			if ctx.message.author.server_permissions.administrator or ctx.message.author.id == '399567243744116738':
 			await client.send_message(message.channel, '{0.author.mention} Your announcement has been sent succesfully!'.format(message))
 			args = message.content.split(" ")		
 			channel=client.get_channel('568135270210207755')
