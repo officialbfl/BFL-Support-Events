@@ -352,10 +352,10 @@ async def on_message(message):
 		if message.content[9:] =="":
 			await client.send_message(message.channel, 'Error. Type in an announcement.')
 		else:
+		if message.author.server_permissions.adminstrator
 			await client.send_message(message.channel, '{0.author.mention} Your announcement has been sent succesfully!'.format(message))
 			args = message.content.split(" ")		
 			channel=client.get_channel('568135270210207755')
-			if message.message.author.server_permissions.adminstrator
 			embed = discord.Embed(title='', color=0x3391D0)
 			embed.add_field(name="__Announcement__", value= "```%s```" % (" ".join(args[1:])), inline=False)
 			embed.add_field(name="By", value="{0.author}".format(message), inline=False)
