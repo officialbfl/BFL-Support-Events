@@ -352,7 +352,7 @@ async def on_message(message):
 		if message.content[9:] =="":
 			await client.send_message(message.channel, 'Error. Type in an announcement.')
 		else:
-			if message.author.administrator
+			if message.author.id == "519231052556795944" or message.author.id == "562000458181246982" or message.author.id == "528585408703889429":
 			await client.send_message(message.channel, '{0.author.mention} Your announcement has been sent succesfully!'.format(message))
 			args = message.content.split(" ")		
 			channel=client.get_channel('568135270210207755')
