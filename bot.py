@@ -347,9 +347,9 @@ async def on_message(message):
 		embed.set_thumbnail(url='http://pngimg.com/uploads/question_mark/question_mark_PNG130.png')
 		await client.send_message(message.channel, embed=embed)	
 		
-		
+@client.event
+async def on_message(message):
 	if message.content.startswith('-announce'):
-		if message.content[9:] =="":
 		 if message.author.id == "519231052556795944" or message.author.id == "562000458181246982":
 			await client.send_message(message.channel, '{0.author.mention} Your announcement has been sent succesfully!'.format(message))
 			args = message.content.split(" ")		
