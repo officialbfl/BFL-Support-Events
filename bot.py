@@ -20,7 +20,6 @@ async def on_ready():
     print(client.user.id)
     print('------')	
 
-
 @client.event
 async def on_member_join(member):
 	channel = member.server.get_channel("566646862812282890")
@@ -29,14 +28,9 @@ async def on_member_join(member):
 	embed.set_author(name="Member Joined", icon_url=member.avatar_url)
 	txt = member.id
 	xd = " | Joined: "
-	utc_dt = datetime.now(timezone.utc)
-        p = utc_dt.strftime('%H:%M:%S • %d/%m/%Y')
-        utc = str(p)    
-        a=ctx.message.author
-        txtt= str(a) + " | " + str(utc)
-	embed.set_footer(text="ID: "+txt +xd +txtt)
+	hoho = member.joined_at.__format__('%d. %B %Y %H:%M:%S')
+	embed.set_footer(text="ID: "+txt +xd +hoho)
 	await client.send_message(channel, embed=embed)
-
 @client.event
 async def on_member_remove(member):
 	channel = member.server.get_channel("566646862812282890")
