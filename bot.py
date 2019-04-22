@@ -30,8 +30,8 @@ async def on_member_join(member):
 	txt = member.id
 	xd = " | Joined: "
 	utc_dt = datetime.now(timezone.utc)
-        p = utc_dt.strftime('       %H:%M:%S • %d/%m/%Y  ')
-        utc = str(    p)    
+        p = utc_dt.strftime('%H:%M:%S • %d/%m/%Y')
+        utc = str(p)    
         a=ctx.message.author
         txtt= str(a) + " | " + str(utc)
 	embed.set_footer(text="ID: "+txt +xd +txtt)
