@@ -29,8 +29,12 @@ async def on_member_join(member):
 	embed.set_author(name="Member Joined", icon_url=member.avatar_url)
 	txt = member.id
 	xd = " | Joined: "
-	hoho = member.joined_at.__format__('%d. %B %Y %H:%M:%S')
-	embed.set_footer(text="ID: "+txt +xd +hoho)
+	utc_dt = datetime.now(timezone.utc)
+        p = utc_dt.strftime('       %H:%M:%S • %d/%m/%Y  ')
+        utc = str(    p)    
+        a=ctx.message.author
+        txtt= str(a) + " | " + str(utc)
+	embed.set_footer(text="ID: "+txt +xd +txtt)
 	await client.send_message(channel, embed=embed)
 
 @client.event
