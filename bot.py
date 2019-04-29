@@ -87,9 +87,9 @@ async def on_message(message):
 	if message.content.startswith('-help credits'):
 		embed = discord.Embed(title="Command: -credits",description='**Description:** Displays the bots info \n **Cooldown:** No cooldown \n **Usage:** -credits', color= 0x546E7A)
 		await client.send_message(message.channel, embed=embed)
-		
-@client.event
-async def on_message(message):
+	
+	
+	
 	if message.content.upper().startswith('-SAY'):
 	 if message.author.id == "562000458181246982" or message.author.id == "571047409262788618":
 			args = message.content.split(" ")
@@ -97,8 +97,7 @@ async def on_message(message):
 			await client.delete_message(message)
 
 
-@client.event
-async def on_message(message):
+		
 	if message.content.startswith('-help') and message.content[5:] =="": 
 		embed = discord.Embed(title=":scroll:__BFL Help__",description='', color=0x3D59AB)
 		embed.add_field(name="-help all", value="Shows the help message for all the categories.", inline=False)
