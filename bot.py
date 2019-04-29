@@ -20,6 +20,74 @@ async def on_ready():
     print(client.user.id)
     print('------')	
 
+
+			
+@client.event
+async def on_message(message):
+	if message.content.startswith('-help ping'):
+		embed = discord.Embed(title="Command: -ping",description='**Description:** Pings the bot \n **Cooldown:** No cooldown \n **Usage:** -ping', color= 0x546E7A)
+		await client.send_message(message.channel, embed=embed)
+
+	if message.content.startswith('-help time'):
+		embed = discord.Embed(title="Command: -time",description='**Description:** Current time in UK \n **Cooldown:** No cooldown \n **Usage:** -time', color= 0x546E7A)
+		await client.send_message(message.channel, embed=embed)
+
+	if message.content.startswith('-help add'):
+		embed = discord.Embed(title="Command: -add",description='**Description:** Adds the two entered numbers \n **Cooldown:** No cooldown \n **Usage:** -add \n **Example:** -add 10 5', color= 0x546E7A)
+		await client.send_message(message.channel, embed=embed)
+
+	if message.content.startswith('-help sub'):
+		embed = discord.Embed(title="Command: -sub",description='**Description:** Subtracts the two entered numbers \n **Cooldown:** No cooldown \n **Usage:** -sub \n **Example:** -sub 10 5', color= 0x546E7A)
+		await client.send_message(message.channel, embed=embed)
+
+	if message.content.startswith('-help multi'):
+		embed = discord.Embed(title="Command: -multi",description='**Description:** Multiplies the two entered numbers \n **Cooldown:** No cooldown \n **Usage:** -multi \n **Example:** -multi 10 5', color= 0x546E7A)
+		await client.send_message(message.channel, embed=embed)
+
+	if message.content.startswith('-help div'):
+		embed = discord.Embed(title="Command: -div",description='**Description:** Divides the two entered numbers \n **Cooldown:** No cooldown \n **Usage:** -div \n **Example:** -div 10 5', color= 0x546E7A)
+		await client.send_message(message.channel, embed=embed)
+
+	if message.content.startswith('-help choose'):
+		embed = discord.Embed(title="Command: -choose",description='**Description:** Chooses one option from the list \n **Cooldown:** No cooldown \n **Usage:** -choose \n **Example** -choose 1/2/3', color= 0x546E7A)
+		await client.send_message(message.channel, embed=embed)
+
+	if message.content.startswith('-help rps'):
+		embed = discord.Embed(title="Command: -rps",description='**Description:** To play rock/paper/scissors with the bot \n **Cooldown:** No cooldown \n **Usage:** -rps \n **Example:** -rps rock', color= 0x546E7A)
+		await client.send_message(message.channel, embed=embed)
+
+	if message.content.startswith('-help flip'):
+		embed = discord.Embed(title="Command: -flip",description='**Description:** To flip a coin \n **Cooldown:** No cooldown \n **Usage:** -flip \n **Example:** -flip heads', color= 0x546E7A)
+		await client.send_message(message.channel, embed=embed)
+
+	if message.content.startswith('-help meme'):
+		embed = discord.Embed(title="Command: -meme",description='**Description:** Displays a random meme \n **Cooldown:** No cooldown \n **Usage:** -meme', color= 0x546E7A)
+		await client.send_message(message.channel, embed=embed)
+
+	if message.content.startswith('-help kill'):
+		embed = discord.Embed(title="Command: -kill",description='**Description:** Kills the mentioned user \n **Cooldown:** No cooldown \n **Usage:** -kill \n **Example:** -kill @Trocir', color= 0x546E7A)
+		await client.send_message(message.channel, embed=embed)
+
+	if message.content.startswith('-help 8ball'):
+		embed = discord.Embed(title="Command: -8ball",description='**Description:** Answers your yes/no questions \n **Cooldown:** No cooldown \n **Usage:** -8ball \n **Example:** -8ball [Question]', color= 0x546E7A)
+		await client.send_message(message.channel, embed=embed)
+
+	if message.content.startswith('-help avatar'):
+		embed = discord.Embed(title="Command: -avatar",description='**Description:** Displays the avatar of the mentioned user \n **Cooldown:** No cooldown \n **Usage:** -avatar \n **Example:** -avatar @Trocir', color= 0x546E7A)
+		await client.send_message(message.channel, embed=embed)
+
+	if message.content.startswith('-help userinfo'):
+		embed = discord.Embed(title="Command: -userinfo",description='**Description:** Displays the mentioned users info \n **Cooldown:** No cooldown \n **Usage:** -userinfo \n **Example:** -userinfo @Trocir', color= 0x546E7A)
+		await client.send_message(message.channel, embed=embed)
+
+	if message.content.startswith('-help serverinfo'):
+		embed = discord.Embed(title="Command: -serverinfo",description='**Description:** Displays the server stats  \n **Cooldown:** No cooldown \n **Usage:** -serverinfo', color= 0x546E7A)
+		await client.send_message(message.channel, embed=embed)
+
+	if message.content.startswith('-help credits'):
+		embed = discord.Embed(title="Command: -credits",description='**Description:** Displays the bots info \n **Cooldown:** No cooldown \n **Usage:** -credits', color= 0x546E7A)
+		await client.send_message(message.channel, embed=embed)
+		
 @client.event
 async def on_message(message):
 	if message.content.upper().startswith('-SAY'):
@@ -215,73 +283,8 @@ async def on_message(message):
 			await client.send_message(message.channel, embed=embed)	
 
 		else:
-			await client.send_message(message.channel, "<:bflError:571029125578620928> Invalid, choose heads/tails.")
-			
-@client.event
-async def on_message(message):
-	if message.content.startswith('-help ping'):
-		embed = discord.Embed(title="Command: -ping",description='**Description:** Pings the bot \n **Cooldown:** No cooldown \n **Usage:** -ping', color= 0x546E7A)
-		await client.send_message(message.channel, embed=embed)
+			await client.send_message(message.channel, "<:bflError:571029125578620928> Invalid, choose heads/tails.")		
 
-	if message.content.startswith('-help time'):
-		embed = discord.Embed(title="Command: -time",description='**Description:** Current time in UK \n **Cooldown:** No cooldown \n **Usage:** -time', color= 0x546E7A)
-		await client.send_message(message.channel, embed=embed)
-
-	if message.content.startswith('-help add'):
-		embed = discord.Embed(title="Command: -add",description='**Description:** Adds the two entered numbers \n **Cooldown:** No cooldown \n **Usage:** -add \n **Example:** -add 10 5', color= 0x546E7A)
-		await client.send_message(message.channel, embed=embed)
-
-	if message.content.startswith('-help sub'):
-		embed = discord.Embed(title="Command: -sub",description='**Description:** Subtracts the two entered numbers \n **Cooldown:** No cooldown \n **Usage:** -sub \n **Example:** -sub 10 5', color= 0x546E7A)
-		await client.send_message(message.channel, embed=embed)
-
-	if message.content.startswith('-help multi'):
-		embed = discord.Embed(title="Command: -multi",description='**Description:** Multiplies the two entered numbers \n **Cooldown:** No cooldown \n **Usage:** -multi \n **Example:** -multi 10 5', color= 0x546E7A)
-		await client.send_message(message.channel, embed=embed)
-
-	if message.content.startswith('-help div'):
-		embed = discord.Embed(title="Command: -div",description='**Description:** Divides the two entered numbers \n **Cooldown:** No cooldown \n **Usage:** -div \n **Example:** -div 10 5', color= 0x546E7A)
-		await client.send_message(message.channel, embed=embed)
-
-	if message.content.startswith('-help choose'):
-		embed = discord.Embed(title="Command: -choose",description='**Description:** Chooses one option from the list \n **Cooldown:** No cooldown \n **Usage:** -choose \n **Example** -choose 1/2/3', color= 0x546E7A)
-		await client.send_message(message.channel, embed=embed)
-
-	if message.content.startswith('-help rps'):
-		embed = discord.Embed(title="Command: -rps",description='**Description:** To play rock/paper/scissors with the bot \n **Cooldown:** No cooldown \n **Usage:** -rps \n **Example:** -rps rock', color= 0x546E7A)
-		await client.send_message(message.channel, embed=embed)
-
-	if message.content.startswith('-help flip'):
-		embed = discord.Embed(title="Command: -flip",description='**Description:** To flip a coin \n **Cooldown:** No cooldown \n **Usage:** -flip \n **Example:** -flip heads', color= 0x546E7A)
-		await client.send_message(message.channel, embed=embed)
-
-	if message.content.startswith('-help meme'):
-		embed = discord.Embed(title="Command: -meme",description='**Description:** Displays a random meme \n **Cooldown:** No cooldown \n **Usage:** -meme', color= 0x546E7A)
-		await client.send_message(message.channel, embed=embed)
-
-	if message.content.startswith('-help kill'):
-		embed = discord.Embed(title="Command: -kill",description='**Description:** Kills the mentioned user \n **Cooldown:** No cooldown \n **Usage:** -kill \n **Example:** -kill @Trocir', color= 0x546E7A)
-		await client.send_message(message.channel, embed=embed)
-
-	if message.content.startswith('-help 8ball'):
-		embed = discord.Embed(title="Command: -8ball",description='**Description:** Answers your yes/no questions \n **Cooldown:** No cooldown \n **Usage:** -8ball \n **Example:** -8ball [Question]', color= 0x546E7A)
-		await client.send_message(message.channel, embed=embed)
-
-	if message.content.startswith('-help avatar'):
-		embed = discord.Embed(title="Command: -avatar",description='**Description:** Displays the avatar of the mentioned user \n **Cooldown:** No cooldown \n **Usage:** -avatar \n **Example:** -avatar @Trocir', color= 0x546E7A)
-		await client.send_message(message.channel, embed=embed)
-
-	if message.content.startswith('-help userinfo'):
-		embed = discord.Embed(title="Command: -userinfo",description='**Description:** Displays the mentioned users info \n **Cooldown:** No cooldown \n **Usage:** -userinfo \n **Example:** -userinfo @Trocir', color= 0x546E7A)
-		await client.send_message(message.channel, embed=embed)
-
-	if message.content.startswith('-help serverinfo'):
-		embed = discord.Embed(title="Command: -serverinfo",description='**Description:** Displays the server stats  \n **Cooldown:** No cooldown \n **Usage:** -serverinfo', color= 0x546E7A)
-		await client.send_message(message.channel, embed=embed)
-
-	if message.content.startswith('-help credits'):
-		embed = discord.Embed(title="Command: -credits",description='**Description:** Displays the bots info \n **Cooldown:** No cooldown \n **Usage:** -credits', color= 0x546E7A)
-		await client.send_message(message.channel, embed=embed)
 
   
 client.run(str(os.environ.get('BOT_TOKEN')))
