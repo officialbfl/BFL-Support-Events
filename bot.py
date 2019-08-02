@@ -19,8 +19,10 @@ async def on_ready():
     print(client.user.name)
     print(client.user.id)
     print('------')	
-
-
+	
+@client.event
+async def on_ready():
+    await client.change_presence(game=discord.Game(name='Bonk.io | -help'))
 			
 @client.event
 async def on_message(message):
